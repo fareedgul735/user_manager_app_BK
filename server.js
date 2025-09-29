@@ -10,7 +10,13 @@ const app = express();
 const port = 5000;
 const localHost = "localhost";
 
-app.use(cors("http://user-manager-app-lilac.vercel.app"));
+app.use(
+  cors({
+    origin: "https://user-manager-app-lilac.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 app.use(bodyParser.json());
 
 app.use("/users", userRouter);
