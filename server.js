@@ -6,12 +6,11 @@ import dotenv from "dotenv";
 import userRouter from "./router/userRouter.js";
 dotenv.config();
 
-
 const app = express();
 const port = 5000;
 const localHost = "localhost";
 
-app.use(cors("http://localhost:5173"));
+app.use(cors("http://user-manager-app-lilac.vercel.app"));
 app.use(bodyParser.json());
 
 app.use("/users", userRouter);
