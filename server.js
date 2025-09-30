@@ -13,7 +13,6 @@ const localHost = "localhost";
 app.use(
   cors({
     origin: "https://user-manager-app-lilac.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
