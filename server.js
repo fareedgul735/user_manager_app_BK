@@ -11,10 +11,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "https://user-manager-app-lilac.vercel.app",
-    ],
+    origin: "https://user-manager-app-lilac.vercel.app",
     credentials: true,
   })
 );
