@@ -18,6 +18,9 @@ app.use(
 app.use(bodyParser.json());
 
 app.use("/users", userRouter);
+app.get("/", (req, res) => {
+  res.send("✅ Backend is running...");
+});
 
 const startServer = async () => {
   try {
